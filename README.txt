@@ -1,17 +1,8 @@
-UC CALC v2
-==========
-
-구성:
+UC CALC v3 PRO
 - index.html
 - style.css
 - script.js
-- assets/
 
-실행:
-index.html을 브라우저에서 열면 됩니다.
-
-가격 수정:
-script.js의 PRICE_DATA에서 플랫폼별 UC/보너스/가격을 수정하세요.
-
-주의:
-현재 가격은 예시 데이터입니다. 실제 판매 가격을 사용하기 전에 직접 확인하세요.
+GitHub Pages에 올릴 때 세 파일을 저장소 최상위에 두세요.
+가격은 script.js의 PRICE_DATA에서 수정할 수 있습니다.
+현재 가격은 예시 데이터입니다.

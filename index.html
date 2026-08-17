@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#101419">
+<title>UC CALC v2</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app">
+  <header class="header">
+    <div class="brand">
+      <div class="brand-mark">UC</div>
+      <div><b>UC CALC</b><small>PUBG MOBILE UTILITY</small></div>
+    </div>
+    <div class="header-actions"><button id="themeBtn" class="icon-btn" title="테마">☼</button></div>
+  </header>
+
+  <section class="hero">
+    <div class="hero-copy">
+      <span class="eyebrow">UC PRICE CALCULATOR</span>
+      <h1>필요한 UC를<br><strong>가장 쉽게 계산하세요.</strong></h1>
+      <p>플랫폼과 상품 가격을 기준으로 필요한 UC의 예상 구매 비용을 계산합니다.</p>
+    </div>
+    <div class="hero-stat"><span>CALCULATOR</span><strong>v2.0</strong><small>FAST · SIMPLE · RESPONSIVE</small></div>
+  </section>
+
+  <main class="grid">
+    <section class="panel calculator">
+      <div class="panel-head"><div><span class="kicker">01</span><h2>플랫폼 선택</h2></div><span id="platformLabel" class="status">iOS</span></div>
+      <div class="platforms">
+        <button class="platform active" data-platform="ios"><strong> iOS</strong><span>App Store</span></button>
+        <button class="platform" data-platform="android"><strong>● Android</strong><span>Google Play</span></button>
+        <button class="platform" data-platform="midas"><strong>◆ MidasBuy</strong><span>Recharge</span></button>
+      </div>
+
+      <div class="panel-head second"><div><span class="kicker">02</span><h2>UC 입력</h2></div></div>
+      <div class="uc-input">
+        <input id="ucInput" type="number" min="1" placeholder="예: 12000" inputmode="numeric">
+        <b>UC</b>
+      </div>
+      <div class="quick">
+        <button data-uc="660">660</button><button data-uc="1800">1,800</button><button data-uc="3850">3,850</button><button data-uc="8100">8,100</button><button data-uc="16200">16,200</button>
+      </div>
+
+      <label class="switch-row"><input id="bonus" type="checkbox" checked><span class="switch"></span><span><b>보너스 포함</b><small>패키지에 포함된 보너스 UC를 계산에 반영</small></span></label>
+      <button id="calculate" class="primary">최저가 계산하기 <span>→</span></button>
+      <p class="error" id="error"></p>
+    </section>
+
+    <section class="panel result-panel">
+      <div class="panel-head"><div><span class="kicker">RESULT</span><h2>계산 결과</h2></div><span id="resultBadge" class="badge">READY</span></div>
+      <div id="empty" class="empty"><div class="empty-icon">₩</div><h3>아직 계산하지 않았어요</h3><p>왼쪽에서 UC를 입력하고 계산 버튼을 눌러주세요.</p></div>
+      <div id="result" class="result hidden">
+        <div class="result-top"><span>예상 구매 UC</span><strong id="totalUc">0 UC</strong></div>
+        <div class="price" id="totalPrice">₩0</div>
+        <p id="resultDesc"></p>
+        <div class="breakdown"><h3>추천 구매 조합</h3><div id="packs"></div></div>
+        <div class="save-box"><span>패키지 기준 예상 금액</span><b id="average">₩0</b></div>
+      </div>
+    </section>
+  </main>
+
+  <section class="panel table-panel">
+    <div class="panel-head"><div><span class="kicker">PRICE LIST</span><h2>현재 등록된 상품</h2></div><span class="muted">예시 데이터</span></div>
+    <div class="table-wrap"><table><thead><tr><th>상품</th><th>기본 UC</th><th>보너스</th><th>가격</th></tr></thead><tbody id="priceRows"></tbody></table></div>
+    <p class="notice">※ 실제 충전 가격과 다를 수 있습니다. <code>script.js</code>의 PRICE_DATA를 원하는 가격으로 수정하세요.</p>
+  </section>
+
+  <footer>UC CALC v2 · Fan-made utility · PUBG MOBILE 상표 및 콘텐츠의 권리는 각 권리자에게 있습니다.</footer>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
